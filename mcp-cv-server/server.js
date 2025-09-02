@@ -15,9 +15,10 @@ app.use(morgan("dev"));
 app.use(
   cors({
     origin: [
-      "http://localhost:3000",
-      "https://model-context-protocol-orcin.vercel.app",
-    ],
+    "http://localhost:3000",
+    "https://model-context-protocol-orcin.vercel.app",
+    "https://model-context-protocol-ae7oe02ad-sahan-jayawardhanas-projects.vercel.app"
+  ],
     methods: ["GET", "POST", "OPTIONS"],
     credentials: true,
   })
