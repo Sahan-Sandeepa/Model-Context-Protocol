@@ -2,27 +2,29 @@ const express = require("express");
 const morgan = require("morgan");
 const helmet = require("helmet");
 const cors = require("cors");
+const allowedOrigins = [/\.vercel\.app$/, "http://localhost:3000"];
+
 require("dotenv").config();
 
 const apiRouter = require("./app.js");
-
 const app = express();
 
 app.use(express.json());
 app.use(helmet());
 app.use(morgan("dev"));
 
-app.use(
-  cors({
-    origin: [
-    "http://localhost:3000",
-    "https://model-context-protocol-orcin.vercel.app",
-    "https://model-context-protocol-ae7oe02ad-sahan-jayawardhanas-projects.vercel.app"
-  ],
-    methods: ["GET", "POST", "OPTIONS"],
-    credentials: true,
-  })
-);
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.some(o => (o instanceof RegExp ? o.test(origin) : o === origin))) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  methods: ["GET", "POST", "OPTIONS"],
+  credentials: true
+}));
 
 app.use("/", apiRouter);
 
