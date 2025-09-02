@@ -8,8 +8,11 @@
     "start": "node app.js"
   },
   "dependencies": {
+    "axios": "^1.11.0",
     "dotenv": "^16.4.5",
-    "express": "^4.19.2"
+    "emailjs-com": "^3.2.0",
+    "express": "^4.19.2",
+    "nodemailer": "^7.0.6"
   },
   "devDependencies": {
     "nodemon": "^3.1.0"
