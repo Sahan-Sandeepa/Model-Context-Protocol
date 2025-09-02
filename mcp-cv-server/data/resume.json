@@ -1,0 +1,47 @@
+{
+  "name": "Sahan Jayawardhana",
+  "title": "Software Engineer",
+  "contact": {
+    "email": "Sahan@gmail.com",
+    "phone": "+94-71-5463645",
+    "location": "Gampaha, Sri Lanka"
+  },
+  "summary": "Software engineer with 2 years experience building web apps.",
+  "skills": [
+    "Node.js",
+    "Express",
+    "React",
+    "PostgreSQL",
+    "AWS",
+    "Next.js",
+    "JavaScript",
+    "TypeScript"
+  ],
+  "experience": [
+    {
+      "title": "Associate Software Engineer",
+      "company": "Enlear",
+      "location": "Moratuwa, Sri Lanka",
+      "startDate": "2024-02-01",
+      "endDate": "2025-02-31",
+      "description": "Built and shipped features across the stack; improved performance and developer tooling."
+    },
+    {
+      "title": "Trainee Software Engineer",
+      "company": "Enlear",
+      "location": "Moratuwa, Sri Lanka",
+      "startDate": "2023-08-01",
+      "endDate": "2024-01-30",
+      "description": "Developed APIs, automated CI pipelines, and collaborated with cross-functional teams."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Sri Lanka Institute of Information Technology",
+      "degree": "BSc (Hons) in Information Technology",
+      "field": "Computer Science",
+      "startDate": "2021-01-01",
+      "endDate": "2024-12-01"
+    }
+  ]
+}
