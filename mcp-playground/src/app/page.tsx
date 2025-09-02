@@ -4,7 +4,7 @@ import EmailForm from "./components/EmailForm";
 import ChatMCP from "./components/ChatMCP";
 
 export default function HomePage() {
-  const API_URL = process.env.NEXT_PUBLIC_API_URL || "/api";
+  const API_URL = "https://model-context-protocol-production-9d8f.up.railway.app";
 
   return (
     <main className={styles.container}>
